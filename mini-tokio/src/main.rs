@@ -9,6 +9,8 @@ use std::time::{Duration, Instant};
 use crossbeam::channel;
 use futures::task::{self, ArcWake};
 
+use tokio::sync::Notify;
+
 struct Task {
     future: Mutex<Pin<Box<dyn Future<Output = ()> + Send>>>,
     executor: channel::Sender<Arc<Task>>,
@@ -45,51 +47,66 @@ thread_local! {
     static CURRENT: RefCell<Option<channel::Sender<Arc<Task>>>> = RefCell::new(None);
 }
 
+// async fn delay(dur: Duration) {
+//     struct Delay {
+//         when: Instant,
+//         waker: Option<Arc<Mutex<Waker>>>,
+//     }
+
+//     impl Future for Delay {
+//         type Output = ();
+
+//         fn poll(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<()> {
+//             if let Some(waker) = &self.waker {
+//                 let mut waker = waker.lock().unwrap();
+//                 if !waker.will_wake(cx.waker()) {
+//                     *waker = cx.waker().clone();
+//                 }
+//             } else {
+//                 let when = self.when;
+//                 let waker = Arc::new(Mutex::new(cx.waker().clone()));
+//                 self.waker = Some(waker.clone());
+
+//                 thread::spawn(move || {
+//                     let now = Instant::now();
+//                     if now < when {
+//                         thread::sleep(when - now);
+//                     }
+
+//                     let waker = waker.lock().unwrap();
+//                     waker.wake_by_ref();
+//                 });
+//             }
+
+//             if Instant::now() >= self.when {
+//                 Poll::Ready(())
+//             } else {
+//                 Poll::Pending
+//             }
+//         }
+//     }
+
+//     let future = Delay {
+//         when: Instant::now() + dur,
+//         waker: None,
+//     };
+
+//     future.await;
+// }
+
 async fn delay(dur: Duration) {
-    struct Delay {
-        when: Instant,
-        waker: Option<Arc<Mutex<Waker>>>,
-    }
+    let when = Instant::now() + dur;
+    let notify = Arc::new(Notify::new());
+    let notify2 = notify.clone();
 
-    impl Future for Delay {
-        type Output = ();
-
-        fn poll(mut self: Pin<&mut Self>, cx: &mut Context<'_>) -> Poll<()> {
-            if let Some(waker) = &self.waker {
-                let mut waker = waker.lock().unwrap();
-                if !waker.will_wake(cx.waker()) {
-                    *waker = cx.waker().clone();
-                }
-            } else {
-                let when = self.when;
-                let waker = Arc::new(Mutex::new(cx.waker().clone()));
-                self.waker = Some(waker.clone());
-
-                thread::spawn(move || {
-                    let now = Instant::now();
-                    if now < when {
-                        thread::sleep(when - now);
-                    }
-
-                    let waker = waker.lock().unwrap();
-                    waker.wake_by_ref();
-                });
-            }
-
-            if Instant::now() >= self.when {
-                Poll::Ready(())
-            } else {
-                Poll::Pending
-            }
+    thread::spawn(move || {
+        let now = Instant::now();
+        if now < when {
+            thread::sleep(when - now);
         }
-    }
-
-    let future = Delay {
-        when: Instant::now() + dur,
-        waker: None,
-    };
-
-    future.await;
+        notify2.notify_one();
+    });
+    notify.notified().await;
 }
 
 pub fn spawn<F>(future: F) where F: Future<Output = ()> + Send+ 'static {
