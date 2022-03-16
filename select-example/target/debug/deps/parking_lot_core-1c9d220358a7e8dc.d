@@ -1,0 +1,11 @@
+/home/andy/Source/learn-tokio/select-example/target/debug/deps/parking_lot_core-1c9d220358a7e8dc.rmeta: /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/lib.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/parking_lot.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/spinwait.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/thread_parker/mod.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/util.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/word_lock.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/thread_parker/linux.rs
+
+/home/andy/Source/learn-tokio/select-example/target/debug/deps/parking_lot_core-1c9d220358a7e8dc.d: /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/lib.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/parking_lot.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/spinwait.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/thread_parker/mod.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/util.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/word_lock.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/thread_parker/linux.rs
+
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/lib.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/parking_lot.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/spinwait.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/thread_parker/mod.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/util.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/word_lock.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/parking_lot_core-0.9.1/src/thread_parker/linux.rs:

@@ -1,0 +1,13 @@
+/home/andy/Source/learn-tokio/select-example/target/debug/deps/quote-5f4666774155f97d.rmeta: /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs
+
+/home/andy/Source/learn-tokio/select-example/target/debug/deps/libquote-5f4666774155f97d.rlib: /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs
+
+/home/andy/Source/learn-tokio/select-example/target/debug/deps/quote-5f4666774155f97d.d: /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs /home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs
+
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/lib.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ext.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/format.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/ident_fragment.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/to_tokens.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/runtime.rs:
+/home/andy/.cargo/registry/src/github.com-1ecc6299db9ec823/quote-1.0.15/src/spanned.rs:
